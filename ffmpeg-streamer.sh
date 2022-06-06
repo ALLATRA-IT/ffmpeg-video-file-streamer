@@ -41,6 +41,9 @@ echo '[LOG INFO] -' $date 'Current file to play: "'$FILE_TO_PLAY'"'
 #Seconds: 60
 ############################################
 
+# Считываем с какой секунды начать (при ошибке там будет не 0)
+seconds_from_status=$(awk 'FNR == 2 {print $2}' "./status.txt")
+
 # Считываем кол-во попыток (при ошибке будет не 0)
 retries_from_status=$(awk 'FNR == 1 {print $2}' "./status.txt")
 
