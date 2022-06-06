@@ -10,5 +10,10 @@ _Скрипт предназначен для rtmp трансляции виде
 
 ### 👨‍💻 Пример использования:
 
-`./ffmpeg-streamer.sh /home/forum-7th-2022.mp4 rtmp://a.rtmp.youtube.com/live2/xxxx-qqqq-yyyy-jjjjj-kkkk
-`
+```
+git clone https://github.com/ALLATRA-IT/ffmpeg-video-file-streamer.git
+
+cd ffmpeg-video-file-streamer
+
+./ffmpeg-streamer.sh /home/forum-7th-2022.mp4 rtmp://a.rtmp.youtube.com/live2/xxxx-qqqq-yyyy-jjjjj-kkkk
+```
