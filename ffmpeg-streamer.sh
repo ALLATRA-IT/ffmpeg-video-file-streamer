@@ -34,7 +34,7 @@ function startFfmpeg {
 # Берем первый файл из плейлиста
 date=$(date +%m-%d-%Y-%T)
 
-echo '[LOG INFO] -' $date 'Current file to play: "'$file_to_play'"'
+echo '[LOG INFO] -' $date 'Current file to play: "'$FILE_TO_PLAY'"'
 
 ######## Структура файла status.txt ########
 #Retries: 0
@@ -46,7 +46,7 @@ retries_from_status=$(awk 'FNR == 1 {print $2}' "./status.txt")
 
 # Засекаем время работы
 start_time=$SECONDS
-startFfmpeg $file_to_play $seconds_from_status
+startFfmpeg $FILE_TO_PLAY $seconds_from_status
 # После этой команды ничего не надо добавлять, нам надо обработать результат
 
 # Проверяем результат функции (0 - всё ок)
